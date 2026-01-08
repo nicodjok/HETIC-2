@@ -7,11 +7,13 @@
   <title>Portfolio | Nicolas DJOKOTO-AYITÉ</title>
   <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=81443&format=png&color=000000"
     type="image/x-icon">
-  <!-- ===== Ajoute le lien vers le fichier style.css ===== -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <!-- ===== FOND ÉTOILÉ (CANVAS) ===== -->
+  <canvas id="stars"></canvas>
+
   <!-- ===== HEADER / NAVIGATION ===== -->
   <header>
     <div class="container">
@@ -29,120 +31,125 @@
     </div>
   </header>
 
-  <!-- ===== HERO SECTION ===== -->
-  <section class="hero">
-    <div class="container">
-      <h1>
-        Nicolas Djokoto-Ayité
-      </h1>
-      <p>
-        Profil hybride alliant créativité, design et stratégie digitale. Passionné par l'UX, le monde virtuel et la
-        communication digitale.
-      </p>
-      <a href="#projects" class="cta-button">Découvrir mes projets</a>
-    </div>
-  </section>
-
-  <!-- ===== ABOUT SECTION ===== -->
-  <section class="about" id="about">
-    <div class="container">
-      <h2 class="section-title">À propos de moi</h2>
-
-      <div class="about-content">
-        <div class="about-image">
-          <img src="./img/2A9FDE83-D301-4C40-8D11-0ABA01662E12_1_201_a.jpeg" alt="Photo de profil" />
-        </div>
-
-        <div class="about-text">
-          <h2>
-            Qui suis-je ?
-          </h2>
-          <p>
-            Bachelier depuis juin 2025, je suis actuellement en première année à <strong>HETIC</strong> en webmarketing.
-            Mon parcours est marqué par une passion profonde pour le monde virtuel, le design et l'expérience
-            utilisateur.
-          </p>
-          <p>
-            Mon objectif est de devenir <strong>Product Manager</strong> et explorer la multiculturalité du digital à
-            l'international. Je travaille avec Figma, VsCode, Python, Notion, Github et de multiples outils d'IA.
-          </p>
-        </div>
+  <!-- ===== CONTENU PRINCIPAL ===== -->
+  <main>
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+      <div class="container">
+        <h1>
+          Nicolas Djokoto-Ayité
+        </h1>
+        <p>
+          Profil hybride alliant créativité, design et stratégie digitale. Passionné par l'UX, le monde virtuel et la
+          communication digitale.
+        </p>
+        <a href="#projects" class="cta-button">Découvrir mes projets</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== SKILLS SECTION ===== -->
-  <section class="skills" id="skills">
-    <div class="container">
-      <h2 class="section-title">Mes Compétences</h2>
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="section-title">À propos de moi</h2>
 
-      <div class="skills-grid">
-        <div class="skill-card">
-          <div class="skill-icon">🫂</div>
-          <h3>Esprit d'équipe</h3>
-          <p>Je travaille efficacement en groupe pour atteindre des objectifs communs.</p>
-        </div>
+        <div class="about-content">
+          <div class="about-image">
+            <img src="./img/2A9FDE83-D301-4C40-8D11-0ABA01662E12_1_201_a.jpeg" alt="Photo de profil" />
+          </div>
 
-        <div class="skill-card">
-          <div class="skill-icon">💡</div>
-          <h3>Curiosité</h3>
-          <p>Je cherche constamment à comprendre les nouvelles technologies et tendances.</p>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">🎨</div>
-          <h3>Créativité</h3>
-          <p>Je propose des idées originales pour résoudre des problèmes complexes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PROJECTS SECTION ===== -->
-  <section class="projects" id="projects">
-    <div class="container">
-      <h2 class="section-title">Mes Projets</h2>
-
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-image">🌍</div>
-          <div class="project-content">
-            <h3>Explora - Application Mobile Touristique</h3>
-            <p>Application mobile innovante permettant de découvrir des lieux de divertissement (cinémas, terrains de
-              basket, restaurants, etc.) avec géolocalisation, avis clients et recommandations personnalisées. Un projet
-              ambitieux combinant UX design et stratégie produit.</p>
-            <a href="#" class="project-link">Voir le projet →</a>
+          <div class="about-text">
+            <h2>
+              Qui suis-je ?
+            </h2>
+            <p>
+              Bachelier depuis juin 2025, je suis actuellement en première année à <strong>HETIC</strong> en
+              webmarketing.
+              Mon parcours est marqué par une passion profonde pour le monde virtuel, le design et l'expérience
+              utilisateur.
+            </p>
+            <p>
+              Mon objectif est de devenir <strong>Product Manager</strong> et explorer la multiculturalité du digital à
+              l'international. Je travaille avec Figma, VsCode, Python, Notion, Github et de multiples outils d'IA.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== CONTACT SECTION / FORM ===== -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <h2>Contactez moi</h2>
+    <!-- ===== SKILLS SECTION ===== -->
+    <section class="skills" id="skills">
+      <div class="container">
+        <h2 class="section-title">Mes Compétences</h2>
 
-      <form class="contact-form">
-        <div class="form-group">
-          <label for="name">Votre nom</label>
-          <input type="text" id="name" name="name" placeholder="Votre nom" />
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">🫂</div>
+            <h3>Esprit d'équipe</h3>
+            <p>Je travaille efficacement en groupe pour atteindre des objectifs communs.</p>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">💡</div>
+            <h3>Curiosité</h3>
+            <p>Je cherche constamment à comprendre les nouvelles technologies et tendances.</p>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">🎨</div>
+            <h3>Créativité</h3>
+            <p>Je propose des idées originales pour résoudre des problèmes complexes.</p>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="form-group">
-          <label for="email">Votre email</label>
-          <input type="email" id="email" name="email" placeholder="votre@email.com" />
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <h2 class="section-title">Mes Projets</h2>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">🌍</div>
+            <div class="project-content">
+              <h3>Explora - Application Mobile Touristique</h3>
+              <p>Application mobile innovante permettant de découvrir des lieux de divertissement (cinémas, terrains de
+                basket, restaurants, etc.) avec géolocalisation, avis clients et recommandations personnalisées. Un
+                projet
+                ambitieux combinant UX design et stratégie produit.</p>
+              <a href="#" class="project-link">Voir le projet →</a>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="form-group">
-          <label for="message">Votre message</label>
-          <textarea id="message" name="message" placeholder="Votre message..."></textarea>
-        </div>
+    <!-- ===== CONTACT SECTION / FORM ===== -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2>Contactez moi</h2>
 
-        <button type="submit" class="submit-button">Envoyer</button>
-      </form>
-    </div>
-  </section>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Votre nom</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Votre email</label>
+            <input type="email" id="email" name="email" placeholder="votre@email.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message" placeholder="Votre message..."></textarea>
+          </div>
+
+          <button type="submit" class="submit-button">Envoyer</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
   <!-- ===== FOOTER ===== -->
   <footer>
@@ -184,6 +191,72 @@
       </div>
     </div>
   </footer>
+
+  <!-- ===== SCRIPT FOND ÉTOILÉ ===== -->
+  <script>
+    const canvas = document.getElementById('stars');
+    const ctx = canvas.getContext('2d');
+    let W = window.innerWidth;
+    let H = window.innerHeight;
+    canvas.width = W;
+    canvas.height = H;
+
+    class Star {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * W;
+        this.y = Math.random() * H;
+        this.z = Math.random() * W;
+        this.px = 0;
+        this.py = 0;
+      }
+      update() {
+        this.z -= 2;
+        if (this.z <= 0) this.reset();
+      }
+      draw() {
+        const sx = (this.x - W / 2) * (W / this.z) + W / 2;
+        const sy = (this.y - H / 2) * (W / this.z) + H / 2;
+        const size = (1 - this.z / W) * 2;
+        const brightness = 0.7 + 0.3 * Math.sin(Date.now() / 200 + this.x);
+        ctx.beginPath();
+        ctx.arc(sx, sy, size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255,255,255,${brightness})`;
+        ctx.fill();
+      }
+    }
+
+    let stars = [];
+    for (let i = 0; i < 700; i++) stars.push(new Star());
+
+    function drawGradient() {
+      const gradient = ctx.createRadialGradient(W / 2, H / 2, 0, W / 2, H / 2, W);
+      gradient.addColorStop(0, "#001122");
+      gradient.addColorStop(1, "#000010");
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, W, H);
+    }
+
+    function animate() {
+      drawGradient();
+      for (const s of stars) {
+        s.update();
+        s.draw();
+      }
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    window.addEventListener('resize', () => {
+      W = window.innerWidth;
+      H = window.innerHeight;
+      canvas.width = W;
+      canvas.height = H;
+    });
+  </script>
 </body>
 
 </html>
