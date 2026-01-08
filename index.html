@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon Portfolio</title>
+  <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=81443&format=png&color=000000"
+    type="image/x-icon">
+  <!-- ===== Ajoute le lien vers le fichier style.css ===== -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- ===== HEADER / NAVIGATION ===== -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <!-- TODO MARDI HTML : Changez le nom (remplacez par VOTRE NOM) -->
+          DJOKOTO-AYITE Nicolas
+        </div>
+        <ul class="nav-links">
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="container">
+      <h1>
+        <!-- TODO MARDI HTML : Changez ce titre (ex: "Je suis développeur web") -->
+        Chef de Projet Digitale
+      </h1>
+      <p>
+        <!-- TODO MARDI HTML : Changez cette description (parlez de VOUS) -->
+        Je suis un apprenti de la tech  passionné par le design et l'UX
+      </p>
+      <a href="#projects" class="cta-button">Découvrir mes projets</a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="section-title">À propos de moi</h2>
+
+      <div class="about-content">
+        <div class="about-image">
+          <img src="./img/2A9FDE83-D301-4C40-8D11-0ABA01662E12_1_201_a.jpeg" alt="Photo de profil" />
+        </div>
+
+        <div class="about-text">
+          <h2>
+            <!-- TODO MARDI HTML : Changez ce titre (ex: "Qui suis-je ?") -->
+            Qui suis-je ?
+          </h2>
+          <p>
+            <!-- TODO MARDI HTML : Écrivez un paragraphe sur vous -->
+            Je suis un étudiant en première année de Bachelor en Webmarketing & UX. J'aime découvrir, concevoir, innové.
+          </p>
+          <p>
+            <!-- TODO MARDI HTML : Écrivez un deuxième paragraphe sur vous -->
+            Mon objectif est de devenir Product Manager dans une boîte tech internationale. Je travaille avec Figma,
+            VsCode et de multiple outils d'IA.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2 class="section-title">Mes Compétences</h2>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">🫂</div>
+          <h3>Esprit d'équipe</h3>
+          <p>Je travaille efficacement en groupe.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">💡</div>
+          <h3>Curiosité</h3>
+          <p>Je cherche à comprendre et approfondir.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🎨</div>
+          <h3>Créativité</h3>
+          <p>Je propose des idées originales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2 class="section-title">Mes Projets</h2>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">🌍</div>
+          <div class="project-content">
+            <h3>Explora - Application Mobile Touristique</h3>
+            <p>Application mobile innovante permettant de découvrir des lieux de divertissement (cinémas, terrains de basket, restaurants, etc.) avec géolocalisation, avis clients et recommandations personnalisées. Un projet ambitieux combinant UX design et stratégie produit.</p>
+            <a href="#" class="project-link">Voir le projet →</a>
+          </div>
+        </div>
+
+        
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION / FORM ===== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contactez moi</h2>
+
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Votre nom</label>
+          <input type="text" id="name" name="name" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Votre email</label>
+          <input type="email" id="email" name="email" />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Votre message</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+
+        <button type="submit" class="submit-button">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>À propos</h3>
+          <p>[Une courte phrase sur vous et votre domaine]</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Liens rapides</h3>
+          <p>
+            <a href="#about" style="color: #0071e3; text-decoration: none">À propos</a>
+          </p>
+          <p>
+            <a href="#projects" style="color: #0071e3; text-decoration: none">Projets</a>
+          </p>
+          <p>
+            <a href="#contact" style="color: #0071e3; text-decoration: none">Contact</a>
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Suivez-moi</h3>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/nicolas-djokoto-ayit%C3%A9-a1204935a/" target="_blank"><img
+                src="./icons8-linkedin-48.png" alt="" srcset=""></a>
+            <a href="https://github.com/nicodjok?tab=overview&from=2026-01-01&to=2026-01-07" target="_blank"><img
+                src="" alt="" srcset=""></a>
+            <a href="#">🐦</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2025 Nicolas. Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
