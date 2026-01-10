@@ -44,8 +44,8 @@
     <!-- ===== HERO SECTION ===== -->
     <section class="hero">
       <div class="container">
-        <h1>
-          Nicolas Djokoto-Ayité
+        <h1 id="typing-text">
+          <!-- Le texte sera injecté par JavaScript -->
         </h1>
         <p>
           Profil hybride alliant créativité, design et stratégie digitale. Passionné par l'UX, le monde virtuel et la
@@ -119,7 +119,7 @@
         <div class="projects-grid">
           <div class="project-card">
             <div class="project-image">
-              <img src="img/EXPLORA.png" alt="" class="project-img-file">
+              <img src="./img/EXPLORA.png" alt="Explora - Application Mobile Touristique" class="project-img-file">
             </div>
             <div class="project-content">
               <h3>Explora - Application Mobile Touristique</h3>
@@ -269,6 +269,24 @@
       canvas.width = W;
       canvas.height = H;
     });
+
+    // ===== EFFET MACHINE À ÉCRIRE (TYPING EFFECT) =====
+    const textElement = document.getElementById('typing-text');
+    const text = "Nicolas Djokoto-Ayité";
+    let index = 0;
+
+    function typeEffect() {
+      if (index < text.length) {
+        textElement.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 100); // Vitesse de frappe (100ms)
+      }
+    }
+
+    // Lancer l'effet au chargement de la page
+    window.onload = () => {
+      typeEffect();
+    };
   </script>
 </body>
 
