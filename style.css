@@ -264,13 +264,21 @@ nav {
 .project-image {
     width: 40%;
     min-height: 300px;
-    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    background: rgba(30, 58, 138, 0.1);
     border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 1.5rem;
+    overflow: hidden;
+    /* Pour que l'image ne dépasse pas */
+}
+
+.project-img-file {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Pour que l'image remplisse le cadre sans se déformer */
+    display: block;
 }
 
 .project-content {
@@ -317,10 +325,6 @@ nav {
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: 20px;
 }
 
 .form-group label {
@@ -408,7 +412,6 @@ footer {
 
 .email-icon {
     font-size: 30px;
-    /* Même taille que les images LinkedIn/GitHub */
     line-height: 1;
 }
 
