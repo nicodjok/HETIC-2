@@ -108,28 +108,9 @@ nav {
     margin-bottom: 24px;
     line-height: 1.1;
     min-height: 1.1em;
-    /* Évite le saut de contenu pendant la frappe */
 }
 
-/* Curseur clignotant pour l'effet machine à écrire */
-#typing-text::after {
-    content: "|";
-    margin-left: 5px;
-    color: #1e3a8a;
-    animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-}
+/* Le curseur clignotant a été supprimé selon votre demande */
 
 .hero p {
     font-size: 1.4rem;
@@ -169,6 +150,8 @@ nav {
     font-size: 3.5rem;
     margin-bottom: 60px;
     text-align: center;
+    min-height: 1.2em;
+    /* Pour éviter les sauts de page pendant l'animation */
 }
 
 .about-content {

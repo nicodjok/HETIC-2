@@ -44,9 +44,7 @@
     <!-- ===== HERO SECTION ===== -->
     <section class="hero">
       <div class="container">
-        <h1 id="typing-text">
-          <!-- Le texte sera injecté par JavaScript -->
-        </h1>
+        <h1 class="typing-effect" data-text="Nicolas Djokoto-Ayité"></h1>
         <p>
           Profil hybride alliant créativité, design et stratégie digitale. Passionné par l'UX, le monde virtuel et la
           communication digitale.
@@ -58,7 +56,7 @@
     <!-- ===== ABOUT SECTION ===== -->
     <section class="about" id="about">
       <div class="container">
-        <h2 class="section-title">À propos de moi</h2>
+        <h2 class="section-title typing-effect" data-text="À propos de moi"></h2>
 
         <div class="about-content">
           <div class="about-image">
@@ -87,7 +85,7 @@
     <!-- ===== SKILLS SECTION ===== -->
     <section class="skills" id="skills">
       <div class="container">
-        <h2 class="section-title">Mes Compétences</h2>
+        <h2 class="section-title typing-effect" data-text="Mes Compétences"></h2>
 
         <div class="skills-grid">
           <div class="skill-card">
@@ -114,7 +112,7 @@
     <!-- ===== PROJECTS SECTION ===== -->
     <section class="projects" id="projects">
       <div class="container">
-        <h2 class="section-title">Mes Projets</h2>
+        <h2 class="section-title typing-effect" data-text="Mes Projets"></h2>
 
         <div class="projects-grid">
           <div class="project-card">
@@ -137,7 +135,7 @@
     <!-- ===== CONTACT SECTION / FORM ===== -->
     <section class="contact" id="contact">
       <div class="container">
-        <h2>Contactez moi</h2>
+        <h2 class="typing-effect" data-text="Contactez moi"></h2>
 
         <form class="contact-form">
           <div class="form-group">
@@ -270,22 +268,37 @@
       canvas.height = H;
     });
 
-    // ===== EFFET MACHINE À ÉCRIRE (TYPING EFFECT) =====
-    const textElement = document.getElementById('typing-text');
-    const text = "Nicolas Djokoto-Ayité";
-    let index = 0;
+    // ===== EFFET MACHINE À ÉCRIRE (TYPING EFFECT) MULTIPLE =====
+    function typeWriter(element) {
+      const text = element.getAttribute('data-text');
+      let index = 0;
+      element.innerHTML = ""; // On vide l'élément au départ
 
-    function typeEffect() {
-      if (index < text.length) {
-        textElement.innerHTML += text.charAt(index);
-        index++;
-        setTimeout(typeEffect, 100); // Vitesse de frappe (100ms)
+      function type() {
+        if (index < text.length) {
+          element.innerHTML += text.charAt(index);
+          index++;
+          setTimeout(type, 80); // Vitesse de frappe
+        }
       }
+      type();
     }
 
-    // Lancer l'effet au chargement de la page
+    // Observer pour lancer l'effet quand l'élément devient visible au défilement
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          typeWriter(entry.target);
+          observer.unobserve(entry.target); // On ne le fait qu'une seule fois
+        }
+      });
+    }, { threshold: 0.5 });
+
+    // Lancer l'effet au chargement
     window.onload = () => {
-      typeEffect();
+      document.querySelectorAll('.typing-effect').forEach(el => {
+        observer.observe(el);
+      });
     };
   </script>
 </body>
